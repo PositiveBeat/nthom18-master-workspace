@@ -6,13 +6,13 @@
                 "limitSymbolsToIncludedHeaders": false
             },
             "includePath": [
-                "/home/tbeats/sdu/nthom18-master-workspace/install/swarm_behaviours/include/**",
-                "/opt/ros/foxy/include/**",
-                "/home/tbeats/sdu/nthom18-master-workspace/src/swarm_behaviours/include/**",
-                "/usr/include/**",
+                "${workspaceFolder}/install/swarm_behaviours/include/**",
+                "${workspaceFolder}/src/swarm_behaviours/include/**",
                 "${workspaceFolder}/src/swarm_behaviours/external/swarm-simulator/swarmsim/include/application",
                 "${workspaceFolder}/src/swarm_behaviours/external/swarm-simulator/swarmsim/include/sim",
-                "${workspaceFolder}/src/swarm_behaviours/external/swarm-simulator/swarmsim/include/ui"
+                "${workspaceFolder}/src/swarm_behaviours/external/swarm-simulator/swarmsim/include/ui",
+                "/opt/ros/foxy/include/**",
+                "/usr/include/**"
             ],
             "name": "ROS",
             "intelliSenseMode": "gcc-x64",
@@ -22,4 +22,4 @@
         }
     ],
     "version": 4
-}
+  }
