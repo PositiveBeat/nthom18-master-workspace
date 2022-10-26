@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "${default}",
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "includePath": [
+                "/home/tbeats/sdu/nthom18-master-workspace/install/swarm_behaviours/include/**",
+                "/opt/ros/foxy/include/**",
+                "/home/tbeats/sdu/nthom18-master-workspace/src/swarm_behaviours/include/**",
+                "/usr/include/**",
+                "${workspaceFolder}/src/swarm_behaviours/external/swarm-simulator/swarmsim/include/application",
+                "${workspaceFolder}/src/swarm_behaviours/external/swarm-simulator/swarmsim/include/sim",
+                "${workspaceFolder}/src/swarm_behaviours/external/swarm-simulator/swarmsim/include/ui"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
