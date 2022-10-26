@@ -1,4 +1,4 @@
 [submodule "src/swarm_behaviours/external/swarm-simulator"]
 	path = src/swarm_behaviours/external/swarm-simulator
-	url = https://github.com/kasperg3/swarm-simulator.git
+	url = git@github.com:kasperg3/swarm-simulator.git
     branch = nthom18-dev
