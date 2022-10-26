@@ -4,9 +4,12 @@ log/
 build/
 .cache/
 
-# vscode
-.vscode/
-
 # Colcon 
 COLCON_IGNORE
 AMENT_IGNORE
+
+# vscode
+.vscode/
+
+# SwarmSim
+imgui.ini
