@@ -1,8 +1,10 @@
 #include <cstdio>
 
-#include "Boids.h"
-#include "PropertyPanel.h"
-#include "SwarmSimulator.h"
+#include "boids.hpp"
+#include "property_panel.hpp"
+#include "swarm_simulator.hpp"
+
+#include "EnvironmentState.h"
 
 int main(int argc, char **argv)
 {
