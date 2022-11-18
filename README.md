@@ -3,13 +3,13 @@
 Colcon workspace for master thesis project code, by nthom18.
 
 ---
-> :warning: Submodules might not be included if not cloned this way.
+> :warning: Submodules might not be included if not cloned a specified way.
 Clone this repository with ssh and all submodules with:
 ```
 git clone --recurse-submodules git@github.com:PositiveBeat/nthom18-master-workspace.git
 ```
 
-> :warning: The branch tag in `.gitmodules` does not seem to take affect, change this branch manually with:
+> :warning: The branch tag in `.gitmodules` does not seem to take affect, so the branch should be switched manually with:
 ```
 cd nthom18-master-workspace/src/swarm_behaviours/external/swarm-simulator/
 git checkout nthom18-dev 
