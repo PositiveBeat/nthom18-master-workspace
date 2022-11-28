@@ -1,40 +1,49 @@
-#include "swarm_simulator.h"
+#include "swarm_simulator.hpp"
 
 #define GRAPHICS_API_OPENGL_33
 #include <iostream>
 #include <string>
 
-namespace SwarmSim {
+// namespace SwarmSim
+// {
 
-SwarmSimulator::SwarmSimulator(bool hl, std::list<Robot*> robots, std::list<Widget*> widgetList) : mHeadless(hl) {
+SwarmSimulator::SwarmSimulator(bool hl, std::list<SwarmSim::Robot *> robots, std::list<SwarmSim::Widget *> widgetList) : mHeadless(hl)
+{
     // init logger
-    Log log;
+    SwarmSim::Log log;
     log.Init();
 
     // init simulation
-    mSimulator = std::make_shared<Simulator>(robots);
+    mSimulator = std::make_shared<SwarmSim::Simulator>(robots);
 
-    if (!mHeadless) {
+    if (!mHeadless)
+    {
         // init the view
-        mSimulatorView = std::make_unique<SimulatorView>(mSimulator, widgetList, 1920, 1080);
+        mSimulatorView = std::make_unique<SwarmSim::SimulatorView>(mSimulator, widgetList, 1920, 1080);
     }
 }
 
-SwarmSimulator::~SwarmSimulator() {
+SwarmSimulator::~SwarmSimulator()
+{
 }
 
-void SwarmSimulator::addRobot(Robot* robot) {
+void SwarmSimulator::addRobot(SwarmSim::Robot *robot)
+{
 }
 
-bool SwarmSimulator::shouldClose() {
+bool SwarmSimulator::shouldClose()
+{
     return mHeadless ? false : WindowShouldClose();
 }
 
-void SwarmSimulator::loop() {
-    while (!shouldClose()) {
+void SwarmSimulator::loop()
+{
+    while (!shouldClose())
+    {
         // step SwarmSimulator
         mSimulator->step();
-        if (!mHeadless) {
+        if (!mHeadless)
+        {
             // handle input
             mSimulatorView->update();
             // render state
@@ -43,10 +52,12 @@ void SwarmSimulator::loop() {
     }
 }
 
-void SwarmSimulator::loopOnce() {
+void SwarmSimulator::loopOnce()
+{
     // step SwarmSimulator
     mSimulator->step();
-    if (!mHeadless) {
+    if (!mHeadless)
+    {
         // handle input
         mSimulatorView->update();
         // render state
@@ -54,4 +65,4 @@ void SwarmSimulator::loopOnce() {
     }
 }
 
-}  // namespace SwarmSim
+// } // namespace SwarmSim
