@@ -4,9 +4,6 @@
 #include <iostream>
 #include <string>
 
-// namespace SwarmSim
-// {
-
 SwarmSimulator::SwarmSimulator(bool hl, std::list<SwarmSim::Robot *> robots, std::list<SwarmSim::Widget *> widgetList) : mHeadless(hl)
 {
     // init logger
@@ -64,5 +61,3 @@ void SwarmSimulator::loopOnce()
         mSimulatorView->render();
     }
 }
-
-// } // namespace SwarmSim

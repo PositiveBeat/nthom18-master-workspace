@@ -9,7 +9,6 @@
 #include "../sim/Simulator.h"
 #include "../ui/SimulatorView.h"
 
-// namespace SwarmSim {
 class SwarmSimulator
 {
 public:
@@ -28,7 +27,5 @@ private:
 
     void customLog(int msgType, const char *text, va_list args);
 };
-
-// }  // namespace SwarmSim
 
 #endif // SWARMSIM_H

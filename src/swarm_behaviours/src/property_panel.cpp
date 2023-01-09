@@ -3,9 +3,6 @@
 #include "agent.hpp"
 #include "ImGuiUtil.h"
 
-// namespace SwarmSim
-// {
-
 PropertyPanel::PropertyPanel() : mRestart(false)
 {
 }
@@ -45,4 +42,3 @@ void PropertyPanel::update(std::shared_ptr<SwarmSim::EnvironmentState> state)
         b->setRadiusToNeighbour(mRadiusToNeighbour);
     }
 }
-// }

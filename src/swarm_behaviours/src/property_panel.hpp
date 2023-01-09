@@ -4,8 +4,6 @@
 
 #include "../sim/Simulator.h"
 #include "Widget.h"
-// namespace SwarmSim
-// {
 
 class PropertyPanel : public SwarmSim::Widget
 {
@@ -29,6 +27,5 @@ private:
     float mRadiusToNeighbour = 5;
     glm::dvec3 mTarget;
 };
-// }
 
 #endif // __PROPERTYPANEL_H__
