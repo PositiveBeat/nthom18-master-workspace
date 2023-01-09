@@ -1,15 +1,14 @@
-#ifndef BOIDS_H
-#define BOIDS_H
+#ifndef AGENT_H
+#define AGENT_H
 #include "Robot.h"
 #pragma once
-// namespace SwarmSim
-// {
 
-class Boids : public SwarmSim::Robot
+class Agent : public SwarmSim::Robot
 {
+
 public:
-    Boids();
-    ~Boids();
+    Agent();
+    ~Agent();
 
     // void sense(std::shared_ptr<SwarmSim::EnvironmentState>) override;
     void sense(std::shared_ptr<SwarmSim::EnvironmentState> state);
@@ -50,6 +49,5 @@ private:
     double mAttractorWeight = 0.0f;
     double mRadiusToNeighbour = 5.0f;
 };
-// }
 
 #endif

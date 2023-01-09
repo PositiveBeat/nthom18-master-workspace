@@ -1,4 +1,4 @@
-#include "boids.hpp"
+#include "agent.hpp"
 
 #include <math.h>
 
@@ -14,15 +14,12 @@
 #define DELTA_TIME 0.1
 #include "core/Random.h"
 
-// namespace SwarmSim
-// {
-
-Boids::Boids()
+Agent::Agent()
 {
     reset();
 }
 
-void Boids::sense(std::shared_ptr<SwarmSim::EnvironmentState> state)
+void Agent::sense(std::shared_ptr<SwarmSim::EnvironmentState> state)
 {
     glm::dvec3 allignment(0.0, 0.0, 0.0);
     glm::dvec3 flockCenter(0.0, 0.0, 0.0);
@@ -63,7 +60,7 @@ void Boids::sense(std::shared_ptr<SwarmSim::EnvironmentState> state)
     mCohesion = cohesion;
 }
 
-void Boids::act()
+void Agent::act()
 {
     // calculate the new velocity:
     glm::dvec3 newVelocity = getVelocity() +
@@ -78,7 +75,7 @@ void Boids::act()
     setPosition(getPosition() + getVelocity() * DELTA_TIME);
 }
 
-bool Boids::isNeighbouring(Robot *robot)
+bool Agent::isNeighbouring(Robot *robot)
 {
     bool result = false;
     // if the robot is not itself and is within radius
@@ -97,7 +94,7 @@ bool Boids::isNeighbouring(Robot *robot)
     return result;
 }
 
-void Boids::reset()
+void Agent::reset()
 {
     mAttributes = {
         glm::dvec3(20.0, 20.0, 20.0), // Attractor target
@@ -112,11 +109,11 @@ void Boids::reset()
     };
 }
 
-Boids::~Boids()
+Agent::~Agent()
 {
 }
 
-void Boids::draw()
+void Agent::draw()
 {
     // Draw the default model
     Robot::draw();
@@ -124,4 +121,3 @@ void Boids::draw()
     Vector3 rlPos = {(float)pos.x, (float)pos.y, (float)pos.z};
     DrawCircle3D(rlPos, getRadiusToNeighbour(), {1, 0, 0}, -90, LIGHTGRAY);
 }
-// }

@@ -1,6 +1,6 @@
 #include <cstdio>
 
-#include "boids.hpp"
+#include "agent.hpp"
 #include "property_panel.hpp"
 #include "swarm_simulator.hpp"
 
@@ -16,7 +16,7 @@ int main(int argc, char **argv)
   std::list<SwarmSim::Robot *> robots;
   for (size_t i = 0; i < 250; i++)
   {
-    robots.emplace_back(new Boids());
+    robots.emplace_back(new Agent());
   }
 
   // Custom property menu

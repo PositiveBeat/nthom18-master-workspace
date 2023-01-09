@@ -21,13 +21,13 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/external/swarm-simulator/swarmsim) # Incl
 # ament_export_dependencies(rclcpp)
 
 
-# boids.cpp
-add_library(boids src/boids.cpp)
-target_link_libraries(boids PRIVATE SwarmSim)
+# agent.cpp
+add_library(agent src/agent.cpp)
+target_link_libraries(agent PRIVATE SwarmSim)
 
 # property_panel.cpp
 add_library(property_panel src/property_panel.cpp)
-target_link_libraries(property_panel PRIVATE SwarmSim)
+target_link_libraries(property_panel PRIVATE SwarmSim agent)
 
 # swarm_simulator.cpp
 add_library(swarm_simulator src/swarm_simulator.cpp)
@@ -36,7 +36,7 @@ target_link_libraries(swarm_simulator PRIVATE SwarmSim)
 # swarm_behaviours.cpp
 add_executable(swarm_behaviours src/swarm_behaviours.cpp)
 target_include_directories(swarm_behaviours PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include> $<INSTALL_INTERFACE:include>) # Link header files
-target_link_libraries(swarm_behaviours PRIVATE SwarmSim boids property_panel swarm_simulator)
+target_link_libraries(swarm_behaviours PRIVATE SwarmSim agent property_panel swarm_simulator)
 
 
 install(
@@ -60,7 +60,7 @@ install(
 
 # Install
 install(TARGETS 
-    boids
+    agent
     property_panel
     swarm_simulator
     swarm_behaviours

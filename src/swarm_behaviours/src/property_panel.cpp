@@ -1,6 +1,6 @@
 #include "property_panel.hpp"
 
-#include "boids.hpp"
+#include "agent.hpp"
 #include "ImGuiUtil.h"
 
 // namespace SwarmSim
@@ -38,7 +38,7 @@ void PropertyPanel::update(std::shared_ptr<SwarmSim::EnvironmentState> state)
     // TODO this is not the right way. Find a way of updating robot parameters without casting to a type
     for (SwarmSim::Robot *robot : state->getRobots())
     {
-        Boids *b = static_cast<Boids *>(robot);
+        Agent *b = static_cast<Agent *>(robot);
         b->setCohesionWeight(mCohesion);
         b->setSeparationWeight(mSeparation);
         b->setAllignmentWeight(mAllignment);
