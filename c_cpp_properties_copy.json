@@ -8,9 +8,7 @@
             "includePath": [
                 "${workspaceFolder}/install/swarm_behaviours/include/**",
                 "${workspaceFolder}/src/swarm_behaviours/include/**",
-                "${workspaceFolder}/src/swarm_behaviours/external/swarm-simulator/swarmsim/include/application",
-                "${workspaceFolder}/src/swarm_behaviours/external/swarm-simulator/swarmsim/include/sim",
-                "${workspaceFolder}/src/swarm_behaviours/external/swarm-simulator/swarmsim/include/ui",
+                "${workspaceFolder}/src/swarm_behaviours/external/swarm-simulator/swarmsim/include/**",
                 "/opt/ros/foxy/include/**",
                 "/usr/include/**"
             ],
@@ -22,4 +20,4 @@
         }
     ],
     "version": 4
-  }
+}
